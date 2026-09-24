@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "media-0001",
+    "name": "Gallery photo 001.jpg",
+    "type": "image",
+    "size": 2977547,
+    "createdAt": "2026-09-23T08:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-001/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-001/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0002",
+    "name": "Gallery photo 002.jpg",
+    "type": "image",
+    "size": 2148663,
+    "createdAt": "2026-09-23T07:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-002/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-002/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0003",
+    "name": "Gallery photo 003.jpg",
+    "type": "image",
+    "size": 2537433,
+    "createdAt": "2026-09-23T06:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-003/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-003/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0004",
+    "name": "Gallery photo 004.jpg",
+    "type": "image",
+    "size": 3185463,
+    "createdAt": "2026-09-23T05:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-004/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-004/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0005",
+    "name": "Big Buck Bunny - demo entry 01.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-23T04:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0006",
+    "name": "Gallery photo 005.jpg",
+    "type": "image",
+    "size": 2142113,
+    "createdAt": "2026-09-23T03:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-005/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-005/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0007",
+    "name": "Gallery photo 006.jpg",
+    "type": "image",
+    "size": 3614404,
+    "createdAt": "2026-09-23T02:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-006/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-006/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0008",
+    "name": "Gallery photo 007.jpg",
+    "type": "image",
+    "size": 4220587,
+    "createdAt": "2026-09-23T01:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-007/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-007/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0009",
+    "name": "Gallery photo 008.jpg",
+    "type": "image",
+    "size": 1788922,
+    "createdAt": "2026-09-23T00:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-008/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-008/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0010",
+    "name": "Elephants Dream - demo entry 02.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-22T23:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0011",
+    "name": "Gallery photo 009.jpg",
+    "type": "image",
+    "size": 308502,
+    "createdAt": "2026-09-22T22:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-009/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-009/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0012",
+    "name": "Holiday photo.jpg",
+    "type": "image",
+    "size": 355219,
+    "createdAt": "2026-09-22T21:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-010/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-010/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0013",
+    "name": "Gallery photo 011.jpg",
+    "type": "image",
+    "size": 4431730,
+    "createdAt": "2026-09-22T20:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-011/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-011/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0014",
+    "name": "Gallery photo 012.jpg",
+    "type": "image",
+    "size": 1837508,
+    "createdAt": "2026-09-22T19:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-012/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-012/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0015",
+    "name": "Big Buck Bunny - demo entry 03.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-22T18:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0016",
+    "name": "Gallery photo 013.jpg",
+    "type": "image",
+    "size": 4406903,
+    "createdAt": "2026-09-22T17:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-013/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-013/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0017",
+    "name": "Gallery photo 014.jpg",
+    "type": "image",
+    "size": 552646,
+    "createdAt": "2026-09-22T16:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-014/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-014/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0018",
+    "name": "Gallery photo 015.jpg",
+    "type": "image",
+    "size": 4149248,
+    "createdAt": "2026-09-22T15:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-015/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-015/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0019",
+    "name": "Gallery photo 016.jpg",
+    "type": "image",
+    "size": 779962,
+    "createdAt": "2026-09-22T14:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-016/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-016/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0020",
+    "name": "Elephants Dream - demo entry 04.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-22T13:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0021",
+    "name": "A very long gallery photo filename to verify wrapping and accessible card actions.jpg",
+    "type": "image",
+    "size": 596066,
+    "createdAt": "2026-09-22T12:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-017/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-017/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0022",
+    "name": "Gallery photo 018.jpg",
+    "type": "image",
+    "size": 2847198,
+    "createdAt": "2026-09-22T11:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-018/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-018/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0023",
+    "name": "Gallery photo 019.jpg",
+    "type": "image",
+    "size": 1969297,
+    "createdAt": "2026-09-22T10:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-019/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-019/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0024",
+    "name": "Holiday photo.jpg",
+    "type": "image",
+    "size": 340766,
+    "createdAt": "2026-09-22T09:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-020/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-020/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0025",
+    "name": "Big Buck Bunny - demo entry 05.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-22T08:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0026",
+    "name": "Gallery photo 021.jpg",
+    "type": "image",
+    "size": 3176332,
+    "createdAt": "2026-09-22T07:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-021/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-021/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0027",
+    "name": "Gallery photo 022.jpg",
+    "type": "image",
+    "size": 2932735,
+    "createdAt": "2026-09-22T06:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-022/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-022/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0028",
+    "name": "Gallery photo 023.jpg",
+    "type": "image",
+    "size": 131710,
+    "createdAt": "2026-09-22T05:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-023/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-023/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0029",
+    "name": "Gallery photo 024.jpg",
+    "type": "image",
+    "size": 1676518,
+    "createdAt": "2026-09-22T04:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-024/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-024/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0030",
+    "name": "Elephants Dream - demo entry 06.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-22T03:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0031",
+    "name": "Gallery photo 025.jpg",
+    "type": "image",
+    "size": 3295688,
+    "createdAt": "2026-09-22T02:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-025/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-025/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0032",
+    "name": "Gallery photo 026.jpg",
+    "type": "image",
+    "size": 4477607,
+    "createdAt": "2026-09-22T01:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-026/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-026/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0033",
+    "name": "Gallery photo 027.jpg",
+    "type": "image",
+    "size": 2871109,
+    "createdAt": "2026-09-22T00:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-027/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-027/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0034",
+    "name": "Gallery photo 028.jpg",
+    "type": "image",
+    "size": 3577802,
+    "createdAt": "2026-09-21T23:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-028/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-028/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0035",
+    "name": "Big Buck Bunny - demo entry 07.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-21T22:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0036",
+    "name": "Gallery photo 029.jpg",
+    "type": "image",
+    "size": 1335160,
+    "createdAt": "2026-09-21T21:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-029/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-029/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0037",
+    "name": "Gallery photo 030.jpg",
+    "type": "image",
+    "size": 2255117,
+    "createdAt": "2026-09-21T20:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-030/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-030/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0038",
+    "name": "Gallery photo 031.jpg",
+    "type": "image",
+    "size": 997073,
+    "createdAt": "2026-09-21T19:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-031/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-031/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0039",
+    "name": "Gallery photo 032.jpg",
+    "type": "image",
+    "size": 2635214,
+    "createdAt": "2026-09-21T18:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-032/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-032/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0040",
+    "name": "Elephants Dream - demo entry 08.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-21T17:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0041",
+    "name": "Gallery photo 033.jpg",
+    "type": "image",
+    "size": 4339153,
+    "createdAt": "2026-09-21T16:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-033/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-033/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0042",
+    "name": "Gallery photo 034.jpg",
+    "type": "image",
+    "size": 4339845,
+    "createdAt": "2026-09-21T15:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-034/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-034/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0043",
+    "name": "Gallery photo 035.jpg",
+    "type": "image",
+    "size": 2959768,
+    "createdAt": "2026-09-21T14:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-035/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-035/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0044",
+    "name": "Gallery photo 036.jpg",
+    "type": "image",
+    "size": 563432,
+    "createdAt": "2026-09-21T13:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-036/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-036/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0045",
+    "name": "Big Buck Bunny - demo entry 09.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-21T12:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0046",
+    "name": "Gallery photo 037.jpg",
+    "type": "image",
+    "size": 2368035,
+    "createdAt": "2026-09-21T11:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-037/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-037/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0047",
+    "name": "Gallery photo 038.jpg",
+    "type": "image",
+    "size": 1309878,
+    "createdAt": "2026-09-21T10:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-038/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-038/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0048",
+    "name": "Gallery photo 039.jpg",
+    "type": "image",
+    "size": 1537422,
+    "createdAt": "2026-09-21T09:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-039/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-039/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0049",
+    "name": "Gallery photo 040.jpg",
+    "type": "image",
+    "size": 3858782,
+    "createdAt": "2026-09-21T08:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-040/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-040/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0050",
+    "name": "Elephants Dream - demo entry 10.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-21T07:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0051",
+    "name": "Gallery photo 041.jpg",
+    "type": "image",
+    "size": 4362999,
+    "createdAt": "2026-09-21T06:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-041/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-041/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0052",
+    "name": "Gallery photo 042.jpg",
+    "type": "image",
+    "size": 3837612,
+    "createdAt": "2026-09-21T05:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-042/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-042/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0053",
+    "name": "Gallery photo 043.jpg",
+    "type": "image",
+    "size": 710152,
+    "createdAt": "2026-09-21T04:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-043/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-043/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0054",
+    "name": "Gallery photo 044.jpg",
+    "type": "image",
+    "size": 3536913,
+    "createdAt": "2026-09-21T03:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-044/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-044/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0055",
+    "name": "Big Buck Bunny - demo entry 11.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-21T02:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0056",
+    "name": "Gallery photo 045.jpg",
+    "type": "image",
+    "size": 1657415,
+    "createdAt": "2026-09-21T01:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-045/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-045/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0057",
+    "name": "Gallery photo 046.jpg",
+    "type": "image",
+    "size": 2122398,
+    "createdAt": "2026-09-21T00:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-046/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-046/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0058",
+    "name": "Gallery photo 047.jpg",
+    "type": "image",
+    "size": 2188791,
+    "createdAt": "2026-09-20T23:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-047/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-047/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0059",
+    "name": "Gallery photo 048.jpg",
+    "type": "image",
+    "size": 2101322,
+    "createdAt": "2026-09-20T22:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-048/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-048/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0060",
+    "name": "Elephants Dream - demo entry 12.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-20T21:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0061",
+    "name": "Gallery photo 049.jpg",
+    "type": "image",
+    "size": 3482502,
+    "createdAt": "2026-09-20T20:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-049/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-049/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0062",
+    "name": "Gallery photo 050.jpg",
+    "type": "image",
+    "size": 1402270,
+    "createdAt": "2026-09-20T19:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-050/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-050/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0063",
+    "name": "Gallery photo 051.jpg",
+    "type": "image",
+    "size": 762637,
+    "createdAt": "2026-09-20T18:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-051/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-051/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0064",
+    "name": "Gallery photo 052.jpg",
+    "type": "image",
+    "size": 2166727,
+    "createdAt": "2026-09-20T17:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-052/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-052/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0065",
+    "name": "Big Buck Bunny - demo entry 13.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-20T16:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0066",
+    "name": "Gallery photo 053.jpg",
+    "type": "image",
+    "size": 642655,
+    "createdAt": "2026-09-20T15:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-053/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-053/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0067",
+    "name": "Gallery photo 054.jpg",
+    "type": "image",
+    "size": 3767923,
+    "createdAt": "2026-09-20T14:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-054/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-054/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0068",
+    "name": "Gallery photo 055.jpg",
+    "type": "image",
+    "size": 2181726,
+    "createdAt": "2026-09-20T13:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-055/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-055/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0069",
+    "name": "Gallery photo 056.jpg",
+    "type": "image",
+    "size": 2796983,
+    "createdAt": "2026-09-20T12:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-056/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-056/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0070",
+    "name": "Elephants Dream - demo entry 14.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-20T11:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0071",
+    "name": "Gallery photo 057.jpg",
+    "type": "image",
+    "size": 323101,
+    "createdAt": "2026-09-20T10:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-057/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-057/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0072",
+    "name": "Gallery photo 058.jpg",
+    "type": "image",
+    "size": 2560068,
+    "createdAt": "2026-09-20T09:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-058/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-058/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0073",
+    "name": "Gallery photo 059.jpg",
+    "type": "image",
+    "size": 4429712,
+    "createdAt": "2026-09-20T08:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-059/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-059/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0074",
+    "name": "Gallery photo 060.jpg",
+    "type": "image",
+    "size": 2458566,
+    "createdAt": "2026-09-20T07:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-060/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-060/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0075",
+    "name": "Big Buck Bunny - demo entry 15.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-20T06:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0076",
+    "name": "Gallery photo 061.jpg",
+    "type": "image",
+    "size": 1878519,
+    "createdAt": "2026-09-20T05:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-061/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-061/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0077",
+    "name": "Gallery photo 062.jpg",
+    "type": "image",
+    "size": 204009,
+    "createdAt": "2026-09-20T04:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-062/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-062/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0078",
+    "name": "Gallery photo 063.jpg",
+    "type": "image",
+    "size": 4049182,
+    "createdAt": "2026-09-20T03:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-063/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-063/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0079",
+    "name": "Gallery photo 064.jpg",
+    "type": "image",
+    "size": 580982,
+    "createdAt": "2026-09-20T02:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-064/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-064/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0080",
+    "name": "Elephants Dream - demo entry 16.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-20T01:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0081",
+    "name": "Gallery photo 065.jpg",
+    "type": "image",
+    "size": 2250021,
+    "createdAt": "2026-09-20T00:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-065/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-065/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0082",
+    "name": "Gallery photo 066.jpg",
+    "type": "image",
+    "size": 3636857,
+    "createdAt": "2026-09-19T23:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-066/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-066/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0083",
+    "name": "Gallery photo 067.jpg",
+    "type": "image",
+    "size": 3696003,
+    "createdAt": "2026-09-19T22:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-067/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-067/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0084",
+    "name": "Gallery photo 068.jpg",
+    "type": "image",
+    "size": 877030,
+    "createdAt": "2026-09-19T21:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-068/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-068/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0085",
+    "name": "Big Buck Bunny - demo entry 17.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-19T20:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0086",
+    "name": "Gallery photo 069.jpg",
+    "type": "image",
+    "size": 431137,
+    "createdAt": "2026-09-19T19:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-069/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-069/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0087",
+    "name": "Gallery photo 070.jpg",
+    "type": "image",
+    "size": 4422862,
+    "createdAt": "2026-09-19T18:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-070/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-070/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0088",
+    "name": "Gallery photo 071.jpg",
+    "type": "image",
+    "size": 703932,
+    "createdAt": "2026-09-19T17:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-071/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-071/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0089",
+    "name": "Gallery photo 072.jpg",
+    "type": "image",
+    "size": 197077,
+    "createdAt": "2026-09-19T16:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-072/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-072/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0090",
+    "name": "Elephants Dream - demo entry 18.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-19T15:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  },
+  {
+    "id": "media-0091",
+    "name": "Gallery photo 073.jpg",
+    "type": "image",
+    "size": 1080110,
+    "createdAt": "2026-09-19T14:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-073/480/360",
+    "sourceUrl": "https://picsum.photos/seed/take-home-073/960/720",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 360,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0092",
+    "name": "Gallery photo 074.jpg",
+    "type": "image",
+    "size": 2357798,
+    "createdAt": "2026-09-19T13:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-074/480/640",
+    "sourceUrl": "https://picsum.photos/seed/take-home-074/960/1280",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 640,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0093",
+    "name": "Gallery photo 075.jpg",
+    "type": "image",
+    "size": 2485346,
+    "createdAt": "2026-09-19T12:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-075/480/480",
+    "sourceUrl": "https://picsum.photos/seed/take-home-075/960/960",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 480,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0094",
+    "name": "Gallery photo 076.jpg",
+    "type": "image",
+    "size": 377519,
+    "createdAt": "2026-09-19T11:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-076/480/320",
+    "sourceUrl": "https://picsum.photos/seed/take-home-076/960/640",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 320,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0095",
+    "name": "Big Buck Bunny - demo entry 19.mp4",
+    "type": "video",
+    "size": 61878609,
+    "createdAt": "2026-09-19T10:00:00.000Z",
+    "thumbnailUrl": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217",
+    "sourceUrl": "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2008, Blender Foundation / www.bigbuckbunny.org",
+      "url": "https://peach.blender.org/about/",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  },
+  {
+    "id": "media-0096",
+    "name": "Gallery photo 077.jpg",
+    "type": "image",
+    "size": 3966152,
+    "createdAt": "2026-09-19T09:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-077/480/600",
+    "sourceUrl": "https://picsum.photos/seed/take-home-077/960/1200",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 600,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0097",
+    "name": "Gallery photo 078.jpg",
+    "type": "image",
+    "size": 3964476,
+    "createdAt": "2026-09-19T08:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-078/480/400",
+    "sourceUrl": "https://picsum.photos/seed/take-home-078/960/800",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 400,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0098",
+    "name": "Gallery photo 079.jpg",
+    "type": "image",
+    "size": 3099888,
+    "createdAt": "2026-09-19T07:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-079/480/270",
+    "sourceUrl": "https://picsum.photos/seed/take-home-079/960/540",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 270,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0099",
+    "name": "Gallery photo 080.jpg",
+    "type": "image",
+    "size": 3473785,
+    "createdAt": "2026-09-19T06:00:00.000Z",
+    "thumbnailUrl": "https://picsum.photos/seed/take-home-080/480/720",
+    "sourceUrl": "https://picsum.photos/seed/take-home-080/960/1440",
+    "mimeType": "image/jpeg",
+    "width": 480,
+    "height": 720,
+    "sizeIsSimulated": true,
+    "attribution": {
+      "text": "Photo supplied by Lorem Picsum",
+      "url": "https://picsum.photos/"
+    }
+  },
+  {
+    "id": "media-0100",
+    "name": "Elephants Dream - demo entry 20.mp4",
+    "type": "video",
+    "size": 47065346,
+    "createdAt": "2026-09-19T05:00:00.000Z",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg",
+    "sourceUrl": "https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4",
+    "mimeType": "video/mp4",
+    "sizeIsSimulated": false,
+    "attribution": {
+      "text": "(c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org",
+      "url": "https://orange.blender.org/press/",
+      "license": "CC BY 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.5/"
+    }
+  }
+]
