@@ -70,7 +70,8 @@ export function MediaGallery({ type }: { type: MediaFilter }) {
           </GridItem>
         ))}
       </Grid>
-      {preview && <MediaPreview item={preview} onClose={() => setPreview(null)} />}
+
+      <MediaPreview item={preview} onClose={() => setPreview(null)} />
 
       <div ref={intersectionElRef} />
       {isFetchingNextPage && (

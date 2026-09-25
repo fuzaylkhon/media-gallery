@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { z } from 'zod';
 import type { MediaFilter } from '../services/media/types.ts';
 import { MediaGallery } from './-components/MediaGallery.tsx';
+import { MediaForm } from './-components/MediaForm.tsx';
+import { Modal } from '../components/Modal.tsx';
 
 const FILTERS: { value: MediaFilter; label: string }[] = [
   { value: 'all', label: 'All' },
@@ -20,6 +23,7 @@ export const Route = createFileRoute('/')({
 
 function MediaGalleryPage() {
   const { type } = Route.useSearch();
+  const [uploadOpen, setUploadOpen] = useState(false);
 
   return (
     <div className='w-full h-full px-20'>
@@ -41,9 +45,19 @@ function MediaGalleryPage() {
               </Link>
             ))}
           </nav>
+          <button
+            type='button'
+            className='cursor-pointer rounded-full bg-slate-900 px-4 py-1.5 text-white hover:bg-slate-700'
+            onClick={() => setUploadOpen(true)}
+          >
+            Upload
+          </button>
         </div>
       </header>
       <MediaGallery type={type} />
+      <Modal open={uploadOpen} className='w-[min(100%-2rem,32rem)]' onClose={() => setUploadOpen(false)}>
+        <MediaForm onClose={() => setUploadOpen(false)} />
+      </Modal>
     </div>
   );
 }

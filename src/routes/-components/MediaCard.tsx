@@ -1,13 +1,10 @@
-import { useState } from 'react';
 import type { MediaItem } from '../../services/media/types.ts';
 import { useDeleteMedia } from '../../services/media/useDeleteMedia.ts';
 import { formatBytes } from '../-utils/formatBytes.ts';
+import { useMediaLoadState } from '../-hooks/useMediaLoadState.ts';
 
 export function MediaCard({ item, onPreview }: { item: MediaItem; onPreview: () => void }) {
-  const [loaded, setLoaded] = useState(false);
-  const [failed, setFailed] = useState(false);
   const deleteMedia = useDeleteMedia();
-  const loading = !loaded && !failed;
 
   return (
     <article className='relative overflow-hidden rounded-xl border border-slate-200 bg-white'>
@@ -16,27 +13,7 @@ export function MediaCard({ item, onPreview }: { item: MediaItem; onPreview: () 
         className='relative block aspect-square w-full cursor-pointer overflow-hidden bg-slate-100'
         onClick={onPreview}
       >
-        {failed ? (
-          <span className='absolute inset-0 grid place-items-center text-sm text-slate-600'>Preview unavailable</span>
-        ) : (
-          <img
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-160 motion-reduce:transition-none ${
-              loading ? 'opacity-0' : 'opacity-100'
-            }`}
-            src={item.thumbnailUrl}
-            alt=''
-            loading='lazy'
-            decoding='async'
-            onLoad={() => setLoaded(true)}
-            onError={() => setFailed(true)}
-          />
-        )}
-        {loading && (
-          <span
-            aria-hidden='true'
-            className='absolute inset-0 animate-shimmer bg-linear-100 from-transparent from-20% via-white/50 via-50% to-transparent to-80% motion-reduce:hidden'
-          />
-        )}
+        <MediaThumbnail key={item.thumbnailUrl} src={item.thumbnailUrl} />
       </button>
       <button
         type='button'
@@ -61,5 +38,35 @@ export function MediaCard({ item, onPreview }: { item: MediaItem; onPreview: () 
         )}
       </div>
     </article>
+  );
+}
+
+function MediaThumbnail({ src }: { src: string }) {
+  const { status, onReady, onError } = useMediaLoadState();
+
+  if (status === 'failed') {
+    return <span className='absolute inset-0 grid place-items-center text-sm text-slate-600'>Preview unavailable</span>;
+  }
+
+  return (
+    <>
+      <img
+        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-160 motion-reduce:transition-none ${
+          status === 'loading' ? 'opacity-0' : 'opacity-100'
+        }`}
+        src={src}
+        alt=''
+        loading='lazy'
+        decoding='async'
+        onLoad={onReady}
+        onError={onError}
+      />
+      {status === 'loading' && (
+        <span
+          aria-hidden='true'
+          className='absolute inset-0 animate-shimmer bg-linear-100 from-transparent from-20% via-white/50 via-50% to-transparent to-80% motion-reduce:hidden'
+        />
+      )}
+    </>
   );
 }
