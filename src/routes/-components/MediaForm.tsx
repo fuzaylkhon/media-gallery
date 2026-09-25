@@ -1,29 +1,64 @@
-import { type FormEvent, useState } from 'react';
+import { type SubmitEvent, useEffect, useRef, useState } from 'react';
 import { DndUpload } from '../../components/DndUpload.tsx';
-import { formatBytes } from '../-utils/formatBytes.ts';
-import { useUploadMedia } from '../../services/media/useUploadMedia.ts';
+import { formatBytes } from '../../utils/formatBytes.ts';
+import {
+  addThumbnail,
+  generateThumbnail,
+  removeThumbnail,
+  type ReadyThumbnail,
+  type Thumbnail,
+} from '../../features/thumbnail.ts';
 
-const fileKey = (file: File) => `${file.name}:${file.size}:${file.lastModified}`;
+const fileKey = (file: File) => `${file.name}:${file.size}`;
 
-export function MediaForm({ onClose }: { onClose: () => void }) {
-  const [files, setFiles] = useState<File[]>([]);
-  const upload = useUploadMedia();
+export function MediaForm({ onUpload, onClose }: { onUpload: (files: ReadyThumbnail[]) => void; onClose: () => void }) {
+  const [items, setItems] = useState<Thumbnail[]>([]);
+  const ownedIds = useRef(new Set<string>());
+  const readyItems = items.flatMap((item) => (item.kind === 'ready' ? [item] : []));
+  const isGenerating = items.some((item) => item.kind === 'generating');
 
-  const addFiles = (added: File[]) =>
-    setFiles((prev) => {
-      const keys = new Set(prev.map(fileKey));
-      return [...prev, ...added.filter((file) => !keys.has(fileKey(file)))];
-    });
+  useEffect(() => {
+    const ids = ownedIds.current;
+    return () => {
+      for (const id of ids) removeThumbnail(id);
+      ids.clear();
+    };
+  }, []);
 
-  const handleSubmit = (event: FormEvent) => {
+  function addFiles(files: File[]) {
+    const keys = new Set(items.map((item) => fileKey(item.file)));
+    const added = files
+      .filter((file) => {
+        const key = fileKey(file);
+        if (keys.has(key)) return false;
+        keys.add(key);
+        return true;
+      })
+      .map(addThumbnail);
+
+    for (const item of added) ownedIds.current.add(item.id);
+    setItems((current) => [...current, ...added]);
+
+    for (const item of added) {
+      void generateThumbnail(item, (updated) => {
+        setItems((current) => current.map((entry) => (entry.id === updated.id ? updated : entry)));
+      });
+    }
+  }
+
+  function remove(id: string) {
+    removeThumbnail(id);
+    ownedIds.current.delete(id);
+    setItems((current) => current.filter((item) => item.id !== id));
+  }
+
+  const handleSubmit = (event: SubmitEvent) => {
     event.preventDefault();
-    upload.mutate(files, {
-      onSuccess: (failed) => {
-        if (failed.length === 0) return onClose();
-        // Keep failed files plus any added while uploading.
-        setFiles((prev) => prev.filter((file) => failed.includes(file) || !files.includes(file)));
-      },
-    });
+    const selected = readyItems.filter((item) => ownedIds.current.has(item.id));
+    if (isGenerating || selected.length === 0) return;
+    onUpload(selected);
+    for (const item of selected) ownedIds.current.delete(item.id);
+    onClose();
   };
 
   return (
@@ -51,36 +86,49 @@ export function MediaForm({ onClose }: { onClose: () => void }) {
         <span>
           Drag and drop files here or <span className='text-sky-700 underline underline-offset-2'>browse</span>
         </span>
-        <span className='text-sm text-slate-600'>Images and videos</span>
+        <span className='text-sm text-slate-600'>JPEG, PNG or WebP images, up to 10 MB each</span>
       </DndUpload>
 
-      {files.length > 0 && (
+      {items.length > 0 && (
         <ul className='m-0 flex max-h-60 list-none flex-col gap-2 overflow-y-auto p-0'>
-          {files.map((file) => (
-            <li
-              key={fileKey(file)}
-              className='flex items-center gap-3 rounded-lg border border-slate-200 px-3 py-2 text-sm'
-            >
-              <span className='min-w-0 flex-1 truncate' title={file.name}>
-                {file.name}
-              </span>
-              <span className='shrink-0 text-slate-600'>{formatBytes(file.size)}</span>
+          {items.map((item) => (
+            <li key={item.id} className='flex items-center gap-3 rounded-lg border border-slate-200 px-3 py-2 text-sm'>
+              <div className='grid size-16 shrink-0 place-items-center overflow-hidden rounded-md bg-slate-100'>
+                {item.kind === 'ready' ? (
+                  <img className='size-full object-contain' src={item.url} alt={`Thumbnail of ${item.file.name}`} />
+                ) : (
+                  <span className='px-1 text-center text-xs text-slate-500' aria-hidden='true'>
+                    {item.kind === 'generating' ? 'Preparing…' : 'No preview'}
+                  </span>
+                )}
+              </div>
+              <div className='min-w-0 flex-1'>
+                <p className='m-0 truncate' title={item.file.name}>
+                  {item.file.name}
+                </p>
+                {item.kind === 'generating' && (
+                  <p className='m-0 text-slate-600' role='status'>
+                    Generating thumbnail…
+                  </p>
+                )}
+                {item.kind === 'error' && (
+                  <p className='m-0 text-red-700' role='alert'>
+                    {item.message}
+                  </p>
+                )}
+              </div>
+              <span className='shrink-0 text-slate-600'>{formatBytes(item.file.size)}</span>
               <button
                 type='button'
+                aria-label={`Remove ${item.file.name} from selection`}
                 className='grid size-6 shrink-0 cursor-pointer place-items-center rounded-full text-slate-500 hover:bg-slate-100 hover:text-slate-900'
-                onClick={() => setFiles((prev) => prev.filter((f) => f !== file))}
+                onClick={() => remove(item.id)}
               >
                 ✕
               </button>
             </li>
           ))}
         </ul>
-      )}
-
-      {(upload.data?.length ?? 0) > 0 && (
-        <p className='m-0 text-sm text-red-700' role='alert'>
-          {upload.data?.length} file(s) failed to upload. Try again.
-        </p>
       )}
 
       <div className='flex justify-end gap-2'>
@@ -93,10 +141,10 @@ export function MediaForm({ onClose }: { onClose: () => void }) {
         </button>
         <button
           type='submit'
-          disabled={files.length === 0 || upload.isPending}
+          disabled={readyItems.length === 0 || isGenerating}
           className='cursor-pointer rounded-lg bg-slate-900 px-4 py-2 text-white hover:bg-slate-700 disabled:opacity-50'
         >
-          {upload.isPending ? 'Uploading…' : `Upload${files.length > 0 ? ` (${files.length})` : ''}`}
+          {isGenerating ? 'Preparing previews…' : `Upload (${readyItems.length})`}
         </button>
       </div>
     </form>

@@ -5,6 +5,7 @@ import type { MediaFilter } from '../services/media/types.ts';
 import { MediaGallery } from './-components/MediaGallery.tsx';
 import { MediaForm } from './-components/MediaForm.tsx';
 import { Modal } from '../components/Modal.tsx';
+import { useUploads } from './-hooks/useUploads.ts';
 
 const FILTERS: { value: MediaFilter; label: string }[] = [
   { value: 'all', label: 'All' },
@@ -24,9 +25,10 @@ export const Route = createFileRoute('/')({
 function MediaGalleryPage() {
   const { type } = Route.useSearch();
   const [uploadOpen, setUploadOpen] = useState(false);
+  const uploads = useUploads();
 
   return (
-    <div className='w-full h-full px-20'>
+    <div className='w-full h-full px-20 mt-5'>
       <header className='mb-6 flex flex-wrap items-center justify-between gap-4'>
         <h1>Media gallery</h1>
         <div className='flex gap-4 items-center'>
@@ -54,9 +56,9 @@ function MediaGalleryPage() {
           </button>
         </div>
       </header>
-      <MediaGallery type={type} />
+      <MediaGallery type={type} uploads={uploads} />
       <Modal open={uploadOpen} className='w-[min(100%-2rem,32rem)]' onClose={() => setUploadOpen(false)}>
-        <MediaForm onClose={() => setUploadOpen(false)} />
+        <MediaForm onUpload={uploads.addFiles} onClose={() => setUploadOpen(false)} />
       </Modal>
     </div>
   );

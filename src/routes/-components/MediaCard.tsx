@@ -1,15 +1,26 @@
-import type { MediaItem } from '../../services/media/types.ts';
-import { useDeleteMedia } from '../../services/media/useDeleteMedia.ts';
-import { formatBytes } from '../-utils/formatBytes.ts';
-import { useMediaLoadState } from '../-hooks/useMediaLoadState.ts';
+import type { MediaItem } from '../../services/media/types';
+import { useDeleteMedia } from '../../services/media/mutations';
+import { formatBytes } from '../../utils/formatBytes';
+import { useMediaLoadState } from '../-hooks/useMediaLoadState';
 
-export function MediaCard({ item, onPreview }: { item: MediaItem; onPreview: () => void }) {
+export function MediaCard({
+  item,
+  onPreview,
+  onDeleted,
+  uploaded = false,
+}: {
+  item: MediaItem;
+  onPreview: () => void;
+  onDeleted?: () => void;
+  uploaded?: boolean;
+}) {
   const deleteMedia = useDeleteMedia();
 
   return (
     <article className='relative overflow-hidden rounded-xl border border-slate-200 bg-white'>
       <button
         type='button'
+        aria-label={`Preview ${item.name}`}
         className='relative block aspect-square w-full cursor-pointer overflow-hidden bg-slate-100'
         onClick={onPreview}
       >
@@ -19,7 +30,16 @@ export function MediaCard({ item, onPreview }: { item: MediaItem; onPreview: () 
         type='button'
         disabled={deleteMedia.isPending}
         className='absolute top-2 right-2 grid size-8 cursor-pointer place-items-center rounded-full bg-white/90 text-slate-700 shadow hover:bg-white hover:text-slate-900 disabled:opacity-50'
-        onClick={() => deleteMedia.mutate(item.id)}
+        onClick={() =>
+          deleteMedia.mutate(
+            item.id,
+            onDeleted
+              ? {
+                  onSuccess: onDeleted,
+                }
+              : {}
+          )
+        }
       >
         ✕
       </button>
@@ -31,6 +51,11 @@ export function MediaCard({ item, onPreview }: { item: MediaItem; onPreview: () 
           <span>{item.type === 'image' ? 'Image' : 'Video'}</span>
           <span>{formatBytes(item.size)}</span>
         </div>
+        {uploaded && (
+          <p className='mt-1.5 mb-0 text-sm text-green-700' role='status'>
+            Done
+          </p>
+        )}
         {deleteMedia.isError && (
           <p className='mt-1.5 mb-0 text-sm text-red-700' role='alert'>
             Failed to delete. Try again.

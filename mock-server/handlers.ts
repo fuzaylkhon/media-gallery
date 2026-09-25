@@ -1,7 +1,16 @@
 import { delay, http, HttpResponse } from 'msw';
+// @ts-ignore
 import seed from './media.json' with { type: 'json' };
 
-interface MediaItem {
+export const MAX_FILE_SIZE = 5 * 1024 * 1024;
+
+export function validateUploadFile(file: Pick<File, 'type' | 'size'>): string | null {
+  if (file.size > MAX_FILE_SIZE) return 'Image exceeds the 10 MB limit.';
+  return null;
+}
+
+
+type MediaItem = {
   id: string;
   name: string;
   type: 'image' | 'video';
@@ -11,7 +20,7 @@ interface MediaItem {
   sourceUrl: string;
   mimeType: string;
   sizeIsSimulated: boolean;
-}
+};
 
 let records: MediaItem[] = seed.map((item) => {
   if (item.type !== 'image' && item.type !== 'video') throw new Error('Invalid fixture type');
@@ -62,6 +71,10 @@ export const handlers = [
     if (!(file instanceof File)) {
       return HttpResponse.json({ message: 'A file is required' }, { status: 400, headers });
     }
+    const validationError = validateUploadFile(file);
+    if (validationError) {
+      return HttpResponse.json({ message: validationError }, { status: 400, headers });
+    }
     await latency();
     if (Math.random() < 0.2) {
       return HttpResponse.json({ message: 'Failed to upload file' }, { status: 500, headers });
@@ -69,18 +82,19 @@ export const handlers = [
     const id = `upload-${crypto.randomUUID()}`;
     const assetUrl = new URL(`/uploads/${id}`, request.url).href;
     uploads.set(id, file);
-    records.unshift({
+    const media: MediaItem = {
       id,
       name: file.name,
-      type: file.type.startsWith('video/') ? 'video' : 'image',
+      type: 'image',
       size: file.size,
       createdAt: new Date().toISOString(),
       thumbnailUrl: assetUrl,
       sourceUrl: assetUrl,
       mimeType: file.type || 'application/octet-stream',
       sizeIsSimulated: false,
-    });
-    return HttpResponse.json({ url: assetUrl }, { status: 201, headers });
+    };
+    records.unshift(media);
+    return HttpResponse.json(media, { status: 201, headers });
   }),
 
   http.delete<{ id: string }>('*/api/media/:id?', async ({ params }) => {

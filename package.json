@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently -k -n api,web \"pnpm dev:api\" \"pnpm dev:web\"",
-    "dev:api": "node --watch src/mock-server/server.ts",
+    "dev:api": "node --watch mock-server/server.ts",
     "dev:web": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx,js,jsx --report-unused-disable-directives --max-warnings 0",

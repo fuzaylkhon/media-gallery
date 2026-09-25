@@ -1,4 +1,5 @@
 import { createServer } from '@mswjs/http-middleware';
+// @ts-ignore
 import { handlers } from './handlers.ts';
 
 export const server = createServer(...handlers);
