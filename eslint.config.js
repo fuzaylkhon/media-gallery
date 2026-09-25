@@ -24,4 +24,12 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
+  {
+    // Route files export `Route` next to a local component; the router plugin handles their HMR.
+    files: ['src/routes/**/*.tsx'],
+    ignores: ['src/routes/-*/**'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 ]);

@@ -1,121 +1,146 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import 'tailwindcss';
 
 /* Make Tailwind utilities (font-sans, text-*, bg-*) use the same tokens */
 @theme {
-  --font-sans: "Roboto", system-ui, "Segoe UI", Arial, sans-serif;
-  --font-mono: ui-monospace, "Roboto Mono", Consolas, monospace;
+  --font-sans: 'Roboto', system-ui, 'Segoe UI', Arial, sans-serif;
+  --font-mono: ui-monospace, 'Roboto Mono', Consolas, monospace;
+
+  --animate-shimmer: shimmer 1.3s infinite;
+  @keyframes shimmer {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
 }
 
-:root {
-  --text: #000;
-  --bg: #fff;
-  --border: #e5e7eb;
-  --code-bg: #f3f4f6;
+/* Base layer, so Tailwind utilities (e.g. m-0, text-*, no-underline) override these element defaults */
+@layer base {
+  :root {
+    --text: #000;
+    --bg: #fff;
+    --border: #e5e7eb;
+    --code-bg: #f3f4f6;
 
-  --sans: "Roboto", system-ui, "Segoe UI", Arial, sans-serif;
-  --mono: ui-monospace, "Roboto Mono", Consolas, monospace;
+    --sans: 'Roboto', system-ui, 'Segoe UI', Arial, sans-serif;
+    --mono: ui-monospace, 'Roboto Mono', Consolas, monospace;
 
-  font-family: var(--sans), serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--text);
-  background-color: var(--bg);
+    font-family: var(--sans), serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--text);
+    background-color: var(--bg);
 
-  /* Light only: stops the browser from darkening form controls/scrollbars */
-  color-scheme: light;
+    /* Light only: stops the browser from darkening form controls/scrollbars */
+    color-scheme: light;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg);
-  color: var(--text);
-}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+  }
 
-#root {
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-}
+  #root {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
 
-/* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 0.5em;
-  font-family: var(--sans), serif;
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--text);
-}
+  /* Typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 0.5em;
+    font-family: var(--sans), serif;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text);
+  }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
 
-p {
-  margin: 0 0 1em;
-  color: var(--text);
-}
+  p {
+    margin: 0 0 1em;
+    color: var(--text);
+  }
 
-a {
-  color: var(--text);
-  text-decoration: underline;
-}
+  a {
+    color: var(--text);
+    text-decoration: underline;
+  }
 
-a:hover {
-  text-decoration: none;
-}
+  a:hover {
+    text-decoration: none;
+  }
 
-code {
-  font-family: var(--mono), serif;
-  font-size: 0.875em;
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
-  background: var(--code-bg);
-  color: var(--text);
-}
+  code {
+    font-family: var(--mono), serif;
+    font-size: 0.875em;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    background: var(--code-bg);
+    color: var(--text);
+  }
 
-/* Form elements inherit the app font and color */
-button,
-input,
-select,
-textarea {
-  font: inherit;
-  color: inherit;
-}
+  /* Form elements inherit the app font and color */
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
 
-img,
-svg,
-video {
-  max-width: 100%;
-  display: block;
-}
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    display: block;
+  }
 
-:focus-visible {
-  outline: 2px solid var(--text);
-  outline-offset: 2px;
-}
+  :focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+  }
 
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 }
