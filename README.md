@@ -59,4 +59,4 @@ With more time, I would add keyboard and screen-reader checks, add sorting by da
 
 ## Demo video
 
-Loom link: pending recording.
+Loom link: https://www.loom.com/share/736c68c773f249c2adb900a103c2c35c
