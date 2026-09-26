@@ -11,16 +11,6 @@ pnpm install
 pnpm dev
 ```
 
-Other commands:
-
-```sh
-pnpm build       # strict TypeScript build and production bundle
-pnpm lint        # ESLint
-pnpm test        # deterministic service and cache behavior tests
-pnpm dev:api     # mock API only
-pnpm dev:web     # Vite only
-```
-
 ## Mock API
 
 The mock is a small Node HTTP server using MSW handlers in `mock-server/`. List and delete requests take 500–1000 ms and fail about 15% of the time; uploads fail about 20% of the time.
