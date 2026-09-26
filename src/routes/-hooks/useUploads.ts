@@ -1,14 +1,11 @@
-import { useEffect, useReducer, useRef } from 'react';
+import { useEffect, useReducer, useRef, useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import type { MediaItem } from '../../services/media/types';
+import { cacheUploadedMedia } from '../../services/media/cache.ts';
 import { uploadFile } from '../../services/media/mutations';
+import { mediaKeys } from '../../services/media/queries.ts';
 import { type ReadyThumbnail, removeThumbnail } from '../../features/thumbnail';
 
-type UploadStatus =
-  | { kind: 'uploading'; progress: number }
-  | { kind: 'done'; media: MediaItem }
-  | { kind: 'error'; message: string }
-  | { kind: 'canceled' };
+type UploadStatus = { kind: 'uploading'; progress: number } | { kind: 'error'; message: string } | { kind: 'canceled' };
 
 export type UploadItem = {
   id: string;
@@ -41,6 +38,7 @@ type Attempt = { id: string; file: File; controller: AbortController };
 
 export function useUploads() {
   const [items, dispatch] = useReducer(reducer, []);
+  const [uploadedIds, setUploadedIds] = useState<ReadonlySet<string>>(() => new Set());
   const active = useRef(new Map<string, AbortController>());
   const files = useRef(new Map<string, File>());
   const previews = useRef(new Map<string, string>());
@@ -56,12 +54,17 @@ export function useUploads() {
           dispatch({ kind: 'status', id, status: { kind: 'uploading', progress } });
         },
       }),
-    onSuccess: (media, { id, controller }) => {
+    onSuccess: async (media, { id, controller }) => {
       if (active.current.get(id) !== controller) return;
       active.current.delete(id);
       files.current.delete(id);
-      dispatch({ kind: 'status', id, status: { kind: 'done', media } });
-      void queryClient.invalidateQueries({ queryKey: ['media'], refetchType: 'none' });
+      removeThumbnail(id);
+      previews.current.delete(id);
+
+      await queryClient.cancelQueries({ queryKey: mediaKeys.all });
+      cacheUploadedMedia(queryClient, media);
+      setUploadedIds((ids) => new Set(ids).add(media.id));
+      dispatch({ kind: 'remove', id });
     },
     onError: (error, { id, controller }) => {
       if (active.current.get(id) !== controller) return;
@@ -75,16 +78,7 @@ export function useUploads() {
   });
 
   useEffect(() => {
-    for (const item of items) {
-      if (item.status.kind !== 'done') continue;
-      const previewUrl = previews.current.get(item.id);
-      if (!previewUrl) continue;
-      removeThumbnail(item.id);
-      previews.current.delete(item.id);
-    }
-  }, [items]);
-
-  useEffect(() => {
+    if (import.meta.hot) return;
     const controllers = active.current;
     const retainedFiles = files.current;
     const urls = previews.current;
@@ -137,5 +131,5 @@ export function useUploads() {
     dispatch({ kind: 'remove', id });
   }
 
-  return { items, addFiles, cancel, retry, remove };
+  return { items, uploadedIds, addFiles, cancel, retry, remove };
 }

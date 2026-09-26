@@ -3,17 +3,13 @@ import { useDeleteMedia } from '../../services/media/mutations';
 import { formatBytes } from '../../utils/formatBytes';
 import { useMediaLoadState } from '../-hooks/useMediaLoadState';
 
-export function MediaCard({
-  item,
-  onPreview,
-  onDeleted,
-  uploaded = false,
-}: {
+type MediaCardProps = {
   item: MediaItem;
-  onPreview: () => void;
-  onDeleted?: () => void;
+  onPreview: (item: MediaItem) => void;
   uploaded?: boolean;
-}) {
+};
+
+export function MediaCard({ item, onPreview, uploaded = false }: MediaCardProps) {
   const deleteMedia = useDeleteMedia();
 
   return (
@@ -22,7 +18,7 @@ export function MediaCard({
         type='button'
         aria-label={`Preview ${item.name}`}
         className='relative block aspect-square w-full cursor-pointer overflow-hidden bg-slate-100'
-        onClick={onPreview}
+        onClick={() => onPreview(item)}
       >
         <MediaThumbnail key={item.thumbnailUrl} src={item.thumbnailUrl} />
       </button>
@@ -30,16 +26,7 @@ export function MediaCard({
         type='button'
         disabled={deleteMedia.isPending}
         className='absolute top-2 right-2 grid size-8 cursor-pointer place-items-center rounded-full bg-white/90 text-slate-700 shadow hover:bg-white hover:text-slate-900 disabled:opacity-50'
-        onClick={() =>
-          deleteMedia.mutate(
-            item.id,
-            onDeleted
-              ? {
-                  onSuccess: onDeleted,
-                }
-              : {}
-          )
-        }
+        onClick={() => deleteMedia.mutate(item.id)}
       >
         ✕
       </button>

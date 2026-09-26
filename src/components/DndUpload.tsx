@@ -19,7 +19,8 @@ export function DndUpload({ onFiles, accept, multiple = true, className, childre
   };
 
   const handleDragLeave: DragEventHandler = (event) => {
-    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setDragging(false);
+    const target = event.relatedTarget;
+    if (!(target instanceof Node) || !event.currentTarget.contains(target)) setDragging(false);
   };
 
   const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {

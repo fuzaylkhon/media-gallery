@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { createFileRoute, Link } from '@tanstack/react-router';
+import { createRoute, Link } from '@tanstack/react-router';
 import { z } from 'zod';
 import type { MediaFilter } from '../services/media/types.ts';
+import { Route as rootRoute } from './__root.tsx';
 import { MediaGallery } from './-components/MediaGallery.tsx';
 import { MediaForm } from './-components/MediaForm.tsx';
 import { Modal } from '../components/Modal.tsx';
@@ -17,7 +18,9 @@ const searchSchema = z.object({
   type: z.enum(['all', 'image', 'video']).default('all').catch('all'),
 });
 
-export const Route = createFileRoute('/')({
+export const Route = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/',
   validateSearch: searchSchema,
   component: MediaGalleryPage,
 });
@@ -28,10 +31,10 @@ function MediaGalleryPage() {
   const uploads = useUploads();
 
   return (
-    <div className='w-full h-full px-20 mt-5'>
+    <div className='w-full h-full px-4 mt-5 sm:px-8 lg:px-20'>
       <header className='mb-6 flex flex-wrap items-center justify-between gap-4'>
         <h1>Media gallery</h1>
-        <div className='flex gap-4 items-center'>
+        <div className='flex min-w-0 flex-wrap items-center gap-3'>
           <nav className='flex gap-1 rounded-full bg-slate-100 p-1' aria-label='Media type'>
             {FILTERS.map((filter) => (
               <Link
@@ -39,6 +42,7 @@ function MediaGalleryPage() {
                 to='/'
                 search={{ type: filter.value }}
                 className='rounded-full px-3.5 py-1.5 text-slate-700 no-underline '
+                aria-current={filter.value === type ? 'page' : undefined}
                 style={{
                   background: filter.value === type ? 'white' : undefined,
                 }}
@@ -57,7 +61,12 @@ function MediaGalleryPage() {
         </div>
       </header>
       <MediaGallery type={type} uploads={uploads} />
-      <Modal open={uploadOpen} className='w-[min(100%-2rem,32rem)]' onClose={() => setUploadOpen(false)}>
+      <Modal
+        open={uploadOpen}
+        labelledBy='upload-dialog-title'
+        className='w-[min(32rem,calc(100vw_-_2rem))]'
+        onClose={() => setUploadOpen(false)}
+      >
         <MediaForm onUpload={uploads.addFiles} onClose={() => setUploadOpen(false)} />
       </Modal>
     </div>

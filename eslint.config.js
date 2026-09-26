@@ -7,7 +7,7 @@ import prettier from 'eslint-config-prettier/flat'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist', 'src/routeTree.gen.ts']),
+  globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -25,7 +25,6 @@ export default defineConfig([
     },
   },
   {
-    // Route files export `Route` next to a local component; the router plugin handles their HMR.
     files: ['src/routes/**/*.tsx'],
     ignores: ['src/routes/-*/**'],
     rules: {

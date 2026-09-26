@@ -29,16 +29,11 @@ export function MediaGallery({ type, uploads }: { type: MediaFilter; uploads: Re
     isFetchNextPageError,
   } = useInfiniteQuery(infiniteMediaOptions(type));
   const localItems = type === 'video' ? [] : uploads.items;
-  const uploadedIds = new Set(
-    localItems
-      .map((item) => item.status)
-      .filter((status) => status.kind === 'done')
-      .map((status) => status.media.id)
-  );
-  const serverItems = new Map<string, MediaItem>(
-    data?.pages.flatMap((page) => page.items.map<[string, MediaItem]>((item) => [item.id, item]))
-  );
-  const items = [...serverItems.values()].filter((item) => !uploadedIds.has(item.id));
+  const items = [
+    ...new Map<string, MediaItem>(
+      data?.pages.flatMap((page) => page.items.map<[string, MediaItem]>((item) => [item.id, item]))
+    ).values(),
+  ];
   const [preview, setPreview] = useState<MediaItem | null>(null);
   const canLoadMore = hasNextPage && !isFetchingNextPage && !isFetchNextPageError;
 
@@ -49,30 +44,21 @@ export function MediaGallery({ type, uploads }: { type: MediaFilter; uploads: Re
       <Grid>
         {localItems.map((item) => (
           <GridItem key={item.id}>
-            {item.status.kind === 'done' ? (
-              <MediaCard
-                item={item.status.media}
-                uploaded
-                onPreview={() => {
-                  if (item.status.kind === 'done') setPreview(item.status.media);
-                }}
-                onDeleted={() => uploads.remove(item.id)}
-              />
-            ) : (
-              <UploadCard
-                item={item}
-                onCancel={() => uploads.cancel(item.id)}
-                onRetry={() => uploads.retry(item.id)}
-                onRemove={() => uploads.remove(item.id)}
-              />
-            )}
+            <UploadCard
+              item={item}
+              onCancel={() => uploads.cancel(item.id)}
+              onRetry={() => uploads.retry(item.id)}
+              onRemove={() => uploads.remove(item.id)}
+            />
           </GridItem>
         ))}
+
         {items.map((item) => (
           <GridItem key={item.id}>
-            <MediaCard item={item} onPreview={() => setPreview(item)} />
+            <MediaCard item={item} onPreview={setPreview} />
           </GridItem>
         ))}
+
         {isPending &&
           Array.from({ length: SKELETON_COUNT }, (_, index) => (
             <GridItem key={`skeleton-${index}`}>
@@ -99,6 +85,7 @@ export function MediaGallery({ type, uploads }: { type: MediaFilter; uploads: Re
       <MediaPreview item={preview} onClose={() => setPreview(null)} />
 
       <div ref={intersectionElRef} />
+
       {isFetchingNextPage && (
         <div className='flex min-h-16 items-center justify-center gap-3 text-slate-600' role='status'>
           <span
@@ -108,12 +95,14 @@ export function MediaGallery({ type, uploads }: { type: MediaFilter; uploads: Re
           Loading more media
         </div>
       )}
+
       {isFetchNextPageError && (
         <div className='flex min-h-16 items-center justify-center gap-3 text-slate-600' role='alert'>
           <span>{errorMessage(error)}</span>
           <Button onClick={() => fetchNextPage()}>Retry</Button>
         </div>
       )}
+
       {data && items.length + localItems.length > 0 && !hasNextPage && (
         <p className='flex min-h-16 items-center justify-center gap-3 text-slate-600'>You've reached the end</p>
       )}

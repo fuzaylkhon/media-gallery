@@ -63,7 +63,9 @@ export function MediaForm({ onUpload, onClose }: { onUpload: (files: ReadyThumbn
 
   return (
     <form className='flex flex-col gap-4 p-6' onSubmit={handleSubmit}>
-      <h2 className='m-0 text-xl'>Upload media</h2>
+      <h2 id='upload-dialog-title' className='m-0 text-xl'>
+        Upload media
+      </h2>
 
       <DndUpload
         onFiles={addFiles}

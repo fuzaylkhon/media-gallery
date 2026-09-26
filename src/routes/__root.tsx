@@ -10,8 +10,12 @@ function RootComponent() {
   return (
     <>
       <Outlet />
-      <TanStackRouterDevtools position='bottom-right' />
-      <ReactQueryDevtools />
+      {import.meta.env.DEV && (
+        <>
+          <TanStackRouterDevtools position='bottom-right' />
+          <ReactQueryDevtools />
+        </>
+      )}
     </>
   );
 }

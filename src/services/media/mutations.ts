@@ -1,8 +1,10 @@
+import axios from 'axios';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { validateUploadFile } from '../../utils/validateUploadFile.ts';
 import { apiClient } from '../core/axios.ts';
+import { captureMediaRemoval, removeMediaFromCache, restoreMediaToCache, type MediaRemovalSnapshot } from './cache.ts';
 import type { MediaCache } from './types.ts';
 import { mediaItemSchema } from './types.ts';
-import { validateUploadFile } from '../../utils/validateUploadFile.ts';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { mediaKeys } from './queries.ts';
 
 export async function uploadFile({
@@ -14,52 +16,64 @@ export async function uploadFile({
   signal: AbortSignal;
   onProgress: (percentage: number) => void;
 }) {
+  if (signal.aborted) throw new DOMException('The upload was aborted.', 'AbortError');
   const error = validateUploadFile(file);
   if (error) throw new Error(error);
 
   const body = new FormData();
   body.append('file', file);
-  const { data } = await apiClient.post<unknown>('uploads', body, {
-    signal,
-    onUploadProgress: ({ loaded, total }) => {
-      if (total !== undefined && total > 0) {
-        onProgress(Math.min(100, Math.max(0, Math.round((loaded / total) * 100))));
-      }
-    },
-  });
-  return mediaItemSchema.parse(data);
+  onProgress(0);
+  try {
+    const { data } = await apiClient.post<unknown>('uploads', body, {
+      signal,
+      onUploadProgress: ({ loaded, total }) => {
+        if (total !== undefined && total > 0) {
+          onProgress(Math.min(99, Math.max(0, Math.round((loaded / total) * 100))));
+        }
+      },
+    });
+    const media = mediaItemSchema.parse(data);
+    onProgress(100);
+    return media;
+  } catch (error) {
+    if (signal.aborted || axios.isCancel(error)) {
+      throw new DOMException('The upload was aborted.', 'AbortError');
+    }
+    throw error;
+  }
 }
+
+const deleteMutationKey = ['media', 'delete'] as const;
 
 export function useDeleteMedia() {
   const queryClient = useQueryClient();
   return useMutation({
+    mutationKey: deleteMutationKey,
     mutationFn: (id: string) => apiClient.delete(`media/${id}`),
     onMutate: async (id: string) => {
       await queryClient.cancelQueries({ queryKey: mediaKeys.all });
-      const previous = queryClient.getQueriesData<MediaCache>({ queryKey: mediaKeys.all });
+      const previous: MediaRemovalSnapshot[] = [];
 
-      queryClient.setQueriesData<MediaCache>({ queryKey: mediaKeys.all }, (old) => {
-        if (!old?.pages) {
-          return old;
-        }
-
-        return {
-          ...old,
-          pages: old.pages.map((page) => ({
-            ...page,
-            items: page.items.filter((e) => e.id !== id),
-          })),
-        };
-      });
+      for (const [queryKey, cache] of queryClient.getQueriesData<MediaCache>({ queryKey: mediaKeys.all })) {
+        if (!cache) continue;
+        const snapshot = captureMediaRemoval(queryKey, cache, id);
+        if (!snapshot) continue;
+        previous.push(snapshot);
+        queryClient.setQueryData(queryKey, removeMediaFromCache(cache, id));
+      }
 
       return { previous };
     },
     onError: (_error, _id, context) => {
-      context?.previous.forEach(([queryKey, data]) => {
-        queryClient.setQueryData(queryKey, data);
+      context?.previous.forEach((snapshot) => {
+        queryClient.setQueryData<MediaCache>(snapshot.queryKey, (cache) =>
+          cache ? restoreMediaToCache(cache, snapshot) : cache
+        );
       });
     },
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: mediaKeys.all }),
-    onSettled: () => queryClient.invalidateQueries({ queryKey: mediaKeys.all }),
+    onSettled: async () => {
+      if (queryClient.isMutating({ mutationKey: deleteMutationKey }) !== 1) return;
+      await queryClient.invalidateQueries({ queryKey: mediaKeys.all });
+    },
   });
 }
